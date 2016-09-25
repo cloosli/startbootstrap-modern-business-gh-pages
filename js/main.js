@@ -23,9 +23,23 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/pricing", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
     .when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
     .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
+    .when("/full-width", {templateUrl: "partials/full-width.html", controller: "PageCtrl"})
+    .when("/sidebar", {templateUrl: "partials/sidebar.html", controller: "PageCtrl"})
+
     // Blog
-    .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-    .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
+    .when("/blog", {templateUrl: "partials/blog-home-1.html", controller: "BlogCtrl"})
+    .when("/blog/home-1", {templateUrl: "partials/blog-home-1.html", controller: "BlogCtrl"})
+    .when("/blog/home-2", {templateUrl: "partials/blog-home-2.html", controller: "BlogCtrl"})
+    .when("/blog/post", {templateUrl: "partials/blog-post.html", controller: "BlogCtrl"})
+
+    .when("/port", {templateUrl: "partials/portfolio-item.html", controller: "PortCtrl"})
+    .when("/port/portfolio-1-col", {templateUrl: "partials/portfolio-1-col.html", controller: "PortCtrl"})
+    .when("/port/portfolio-2-col", {templateUrl: "partials/portfolio-2-col.html", controller: "PortCtrl"})
+    .when("/port/portfolio-3-col", {templateUrl: "partials/portfolio-3-col.html", controller: "PortCtrl"})
+    .when("/port/portfolio-4-col", {templateUrl: "partials/portfolio-4-col.html", controller: "PortCtrl"})
+
+    //.when("/carousel-example-generic", {})
+
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
@@ -35,6 +49,13 @@ app.config(['$routeProvider', function ($routeProvider) {
  */
 app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
   console.log("Blog Controller reporting for duty.");
+});
+
+/**
+ * Controls the Portfolio
+ */
+app.controller('PortCtrl', function (/* $scope, $location, $http */) {
+  console.log("PortCtrl Controller reporting for duty.");
 });
 
 /**
